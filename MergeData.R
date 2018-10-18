@@ -26,3 +26,5 @@ us <- map_data("state")
 merge_data$statename <- tolower(merge_data$statename)
 
 
+
+
