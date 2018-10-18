@@ -13,4 +13,6 @@ df <- merge(df, localUSArrests, by = "stateName")   #merging by the common colum
 df       
 
 
+statname <- localUSArrests$stateName
+
 
