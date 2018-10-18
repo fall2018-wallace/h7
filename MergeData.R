@@ -13,3 +13,4 @@ df <- merge(df, localUSArrests, by = "stateName")   #merging by the common colum
 df       
 
 str(df)
+summary(df)
