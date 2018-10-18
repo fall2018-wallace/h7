@@ -34,5 +34,12 @@ map_area <- map_area + expand_limits(x = us$long , y = us$lat) + coord_map() + g
 map_area
 
 
+#Step C: Create a color shaded map of the U.S. based on the Murder rate for each state 
+#â¢Repeat step B, but color code the map based on the murder rate of each state.
+map_mur <- ggplot(merge_data, aes(map_id = statename))
+map_mur <- map_mur + geom_map(map = us, aes(fill = merge_data$Murder))      
+map_mur <- map_mur + expand_limits(x = us$long , y = us$lat) + coord_map() + ggtitle("United States based on the Murder rate per state")
+map_mur
+
 
 
