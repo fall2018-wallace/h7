@@ -14,3 +14,5 @@ df
 
 str(df)
 summary(df)
+
+stateName <- localUSArrests$stateName
