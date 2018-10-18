@@ -29,16 +29,16 @@ merge_data$statename <- tolower(merge_data$statename)
 # a. 
 
 area <- ggplot(merge_data, aes(map_id = statename))
-area <- map_area + geom_map(map = us, aes(fill = merge_data$area))      
-area <- map_area + expand_limits(x = us$long , y = us$lat) + coord_map() + ggtitle("Area of United States")
+area <- area + geom_map(map = us, aes(fill = merge_data$area))      
+area <- area + expand_limits(x = us$long , y = us$lat) + coord_map() + ggtitle("Area of United States")
 area
 
 
 #Step C: Create a color shaded map of the U.S. based on the Murder rate for each state 
 #â¢Repeat step B, but color code the map based on the murder rate of each state.
 mur <- ggplot(merge_data, aes(map_id = statename))
-mur <- map_mur + geom_map(map = us, aes(fill = merge_data$Murder))      
-mur <- map_mur + expand_limits(x = us$long , y = us$lat) + coord_map() + ggtitle("United States based on the Murder rate per state")
+mur <- mur + geom_map(map = us, aes(fill = merge_data$Murder))      
+mur <- mur + expand_limits(x = us$long , y = us$lat) + coord_map() + ggtitle("United States based on the Murder rate per state")
 mur
 
 #â¢Show the population as a circle per state
@@ -46,10 +46,10 @@ mur
 
 
 pop <- ggplot(merge_data, aes(map_id = statename))
-pop <- map_mur_pop + geom_map(map = us, aes(fill = merge_data$Murder)) 
-pop <- map_mur_pop + expand_limits(x = us$long , y = us$lat) + coord_map() + ggtitle("United States based on the Murder rate per state")
-pop<- map_mur_pop + geom_point( x = merge_data$x, y = merge_data$y, aes(size = merge_data$population))      
-pop<- map_mur_pop + ggtitle("Area of United States") 
+pop <- pop + geom_map(map = us, aes(fill = merge_data$Murder)) 
+pop <- pop + expand_limits(x = us$long , y = us$lat) + coord_map() + ggtitle("United States based on the Murder rate per state")
+pop <- pop + geom_point( x = merge_data$x, y = merge_data$y, aes(size = merge_data$population))      
+pop <- pop + ggtitle("Area of United States") 
 pop
 
 NYC <- geocode(source = "dsk", "nyc, new york,ny")
@@ -61,10 +61,10 @@ NYC
 #Hint: set the xlim and ylim to NYC +/- 10
 
 zoom <- ggplot(merge_data, aes(map_id = statename))
-zoom <- zoom_map + geom_map(map = us, aes(fill = merge_data$Murder)) 
-zoom <- zoom_map + expand_limits(x  = us$long, y = us$lat ) + coord_fixed(xlim = c(NYC$lon -10,NYC$lon +10), ylim = c(NYC$lat +10,NYC$lat -10)) 
-zoom <- zoom_map + geom_point( x = merge_data$x, y = merge_data$y, aes(size = merge_data$population))      
-zoom <- zoom_map + ggtitle(" NYC Murder Rate")
+zoom <- zoom + geom_map(map = us, aes(fill = merge_data$Murder)) 
+zoom <- zoom + expand_limits(x  = us$long, y = us$lat ) + coord_fixed(xlim = c(NYC$lon -10,NYC$lon +10), ylim = c(NYC$lat +10,NYC$lat -10)) 
+zoom <- zoom + geom_point( x = merge_data$x, y = merge_data$y, aes(size = merge_data$population))      
+zoom <- zoom + ggtitle(" NYC Murder Rate")
 zoom
 
 
