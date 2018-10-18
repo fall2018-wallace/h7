@@ -1,6 +1,6 @@
 
-library(ggplot2)
-library(ggmap)
+library("ggplot2")
+library("ggmap")
 
 localUSArrests<-USArrests
 localUSArrests
@@ -12,8 +12,5 @@ localUSArrests$stateName <- df$stateName
 df <- merge(df, localUSArrests, by = "stateName")   #merging by the common column stateName
 df       
 
-str(df)
-summary(df)
 
-states<-readStates()
 
