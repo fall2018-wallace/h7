@@ -40,8 +40,11 @@
             "desc": "",
             "name": "MergeData.R",
             "task_status": "in progress"
+        },
+        {
+            "name": "map_mur.png"
         }
     ],
-    "updated_at": "2018-10-18 02:42:41",
+    "updated_at": "2018-10-18 03:04:23",
     "url": "https://github.com/fall2018-wallace/h7"
 }
