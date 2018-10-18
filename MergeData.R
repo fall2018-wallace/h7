@@ -2,6 +2,8 @@
 library("ggplot2")
 library("ggmap")
 
+#Step A: Load and Merge datasets
+
 localUSArrests<-USArrests
 localUSArrests
 df
@@ -26,7 +28,6 @@ us <- map_data("state")
 merge_data$statename <- tolower(merge_data$statename)
 
 # Step B.
-# a. 
 
 area <- ggplot(merge_data, aes(map_id = statename))
 area <- area + geom_map(map = us, aes(fill = merge_data$area))      
@@ -34,8 +35,7 @@ area <- area + expand_limits(x = us$long , y = us$lat) + coord_map() + ggtitle("
 area
 
 
-#Step C: Create a color shaded map of the U.S. based on the Murder rate for each state 
-#â¢Repeat step B, but color code the map based on the murder rate of each state.
+#Step C: 
 mur <- ggplot(merge_data, aes(map_id = statename))
 mur <- mur + geom_map(map = us, aes(fill = merge_data$Murder))      
 mur <- mur + expand_limits(x = us$long , y = us$lat) + coord_map() + ggtitle("United States based on the Murder rate per state")
