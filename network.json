@@ -17,7 +17,7 @@
         {
             "ports": [
                 {
-                    "input": "dfstates",
+                    "input": "df",
                     "output": "c",
                     "type": "r_obj"
                 }
@@ -36,10 +36,12 @@
             "task_status": "in progress"
         },
         {
+            "assigned_to": "dasheth",
             "desc": "",
-            "name": "MergeData.R"
+            "name": "MergeData.R",
+            "task_status": "in progress"
         }
     ],
-    "updated_at": "2018-10-18 02:39:17",
+    "updated_at": "2018-10-18 02:42:41",
     "url": "https://github.com/fall2018-wallace/h7"
 }
