@@ -36,11 +36,12 @@ area
 
 
 #Step C: 
-
+# 4.
 mur <- ggplot(merge_data, aes(map_id = statename))
 mur <- mur + geom_map(map = us, aes(fill = merge_data$Murder))      
 mur <- mur + expand_limits(x = us$long , y = us$lat) + coord_map() + ggtitle("United States based on the Murder rate per state")
 mur
+ #5
 pop <- ggplot(merge_data, aes(map_id = statename))
 pop <- pop + geom_map(map = us, aes(fill = merge_data$Murder)) 
 pop <- pop + expand_limits(x = us$long , y = us$lat) + coord_map() + ggtitle("United States based on the Murder rate per state")
