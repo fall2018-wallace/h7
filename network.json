@@ -28,16 +28,6 @@
         {
             "ports": [
                 {
-                    "output": "zoom_map",
-                    "type": "png"
-                }
-            ],
-            "source": "MergeData.R",
-            "target": "zoom.png"
-        },
-        {
-            "ports": [
-                {
                     "output": "mur",
                     "type": "png"
                 }
@@ -64,6 +54,16 @@
             ],
             "source": "MergeData.R",
             "target": "pop.png"
+        },
+        {
+            "ports": [
+                {
+                    "output": "zoom",
+                    "type": "png"
+                }
+            ],
+            "source": "MergeData.R",
+            "target": "zoom.png"
         }
     ],
     "nodes": [
@@ -94,6 +94,6 @@
             "name": "zoom.png"
         }
     ],
-    "updated_at": "2018-10-18 03:16:58",
+    "updated_at": "2018-10-18 03:17:06",
     "url": "https://github.com/fall2018-wallace/h7"
 }
