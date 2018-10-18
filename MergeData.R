@@ -15,5 +15,6 @@ df
 
 statname <- localUSArrests$stateName
 area <- state.area
+center <- state.center
 
 
