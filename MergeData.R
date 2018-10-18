@@ -17,7 +17,8 @@ statname <- localUSArrests$stateName
 area <- state.area
 center <- state.center
 
-df <- data.frame(statname, area, center)
+merge_df <- data.frame(statname, area, center)
 
+merge_data <- merge(df, merge_df, by="statname" )
 
 
