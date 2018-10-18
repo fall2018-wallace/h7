@@ -30,12 +30,18 @@
             "name": "scprc_est_2017_18_pop_res.csv"
         },
         {
-            "name": "clean.R"
+            "assigned_to": "dasheth",
+            "name": "clean.R",
+            "task_status": "in progress"
         },
         {
             "name": "data.csv"
+        },
+        {
+            "desc": "",
+            "name": "MergeData.R"
         }
     ],
-    "updated_at": "2018-10-18 02:22:09",
+    "updated_at": "2018-10-18 02:37:27",
     "url": "https://github.com/fall2018-wallace/h7"
 }
