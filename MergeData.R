@@ -24,3 +24,4 @@ merge_data <- merge(df, merge_df, by="statname" )
 us <- map_data("state")
 
 
+
