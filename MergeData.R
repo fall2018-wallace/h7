@@ -41,5 +41,31 @@ map_mur <- map_mur + geom_map(map = us, aes(fill = merge_data$Murder))
 map_mur <- map_mur + expand_limits(x = us$long , y = us$lat) + coord_map() + ggtitle("United States based on the Murder rate per state")
 map_mur
 
+#â¢Show the population as a circle per state
+#(the larger the population, the larger the circle) using the location defined by the center of each state
+
+
+map_mur_pop <- ggplot(merge_data, aes(map_id = statename))
+map_mur_pop <- map_mur_pop + geom_map(map = us, aes(fill = merge_data$Murder)) 
+map_mur_pop <- map_mur_pop + expand_limits(x = us$long , y = us$lat) + coord_map() + ggtitle("United States based on the Murder rate per state")
+map_mur_pop<- map_mur_pop + geom_point( x = merge_data$x, y = merge_data$y, aes(size = merge_data$population))      
+map_mur_pop<- map_mur_pop + ggtitle("Area of United States") 
+map_mur_pop
+
+NYC <- geocode(source = "dsk", "nyc, new york,ny")
+NYC
+
+#Step D: Zoom the map
+#â¢Repeat step C, but only show the states in the north east
+#Hint: get the lat and lon of new york city
+#Hint: set the xlim and ylim to NYC +/- 10
+
+zoom_map <- ggplot(merge_data, aes(map_id = statename))
+zoom_map <- zoom_map + geom_map(map = us, aes(fill = merge_data$Murder)) 
+zoom_map <- zoom_map + expand_limits(x  = us$long, y = us$lat ) + coord_fixed(xlim = c(NYC$lon -10,NYC$lon +10), ylim = c(NYC$lat +10,NYC$lat -10)) 
+zoom_map<- zoom_map + geom_point( x = merge_data$x, y = merge_data$y, aes(size = merge_data$population))      
+zoom_map <- zoom_map + ggtitle(" NYC Murder Rate")
+zoom_map
+
 
 
