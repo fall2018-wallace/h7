@@ -13,16 +13,6 @@
             ],
             "source": "scprc_est_2017_18_pop_res.csv",
             "target": "clean.R"
-        },
-        {
-            "ports": [
-                {
-                    "output": "clean_data",
-                    "type": "csv"
-                }
-            ],
-            "source": "clean.R",
-            "target": "data.csv"
         }
     ],
     "nodes": [
@@ -35,13 +25,10 @@
             "task_status": "in progress"
         },
         {
-            "name": "data.csv"
-        },
-        {
             "desc": "",
             "name": "MergeData.R"
         }
     ],
-    "updated_at": "2018-10-18 02:37:27",
+    "updated_at": "2018-10-18 02:38:58",
     "url": "https://github.com/fall2018-wallace/h7"
 }
