@@ -17,4 +17,6 @@ statname <- localUSArrests$stateName
 area <- state.area
 center <- state.center
 
+df <- data.frame(statname, area, center)
+
 
