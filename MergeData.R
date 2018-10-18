@@ -13,7 +13,7 @@ df <- merge(df, localUSArrests)   #merging by the common column stateName
 df       
 
 
-statname <- localUSArrests$stateName
+statename <- localUSArrests$stateName
 area <- state.area
 center <- state.center
 
