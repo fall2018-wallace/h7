@@ -28,6 +28,11 @@ merge_data$statename <- tolower(merge_data$statename)
 # Step B.
 # a. 
 
+map_area <- ggplot(merge_data, aes(map_id = statename))
+map_area <- map_area + geom_map(map = us, aes(fill = merge_data$area))      
+map_area <- map_area + expand_limits(x = us$long , y = us$lat) + coord_map() + ggtitle("Area of United States")
+map_area
+
 
 
 
