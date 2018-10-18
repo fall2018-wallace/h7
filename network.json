@@ -24,6 +24,16 @@
             ],
             "source": "clean.R",
             "target": "MergeData.R"
+        },
+        {
+            "ports": [
+                {
+                    "output": "map_mur",
+                    "type": "png"
+                }
+            ],
+            "source": "MergeData.R",
+            "target": "map_mur.png"
         }
     ],
     "nodes": [
@@ -45,6 +55,6 @@
             "name": "map_mur.png"
         }
     ],
-    "updated_at": "2018-10-18 03:04:23",
+    "updated_at": "2018-10-18 03:04:39",
     "url": "https://github.com/fall2018-wallace/h7"
 }
