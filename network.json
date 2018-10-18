@@ -53,8 +53,11 @@
         },
         {
             "name": "map_mur.png"
+        },
+        {
+            "name": "map_mur_pop.png"
         }
     ],
-    "updated_at": "2018-10-18 03:04:39",
+    "updated_at": "2018-10-18 03:06:07",
     "url": "https://github.com/fall2018-wallace/h7"
 }
