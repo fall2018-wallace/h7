@@ -9,7 +9,7 @@ df<-df[-9,]
 row.names(localUSArrests)
 colnames(df)
 localUSArrests$stateName <- df$stateName  
-df <- merge(df, localUSArrests, by = "stateName")   #merging by the common column stateName
+df <- merge(df, localUSArrests)   #merging by the common column stateName
 df       
 
 
@@ -19,7 +19,7 @@ center <- state.center
 
 merge_df <- data.frame(statname, area, center)
 
-merge_data <- merge(df, merge_df, by="statname" )
+merge_data <- merge(df, merge_df )
 
 us <- map_data("state")
 
