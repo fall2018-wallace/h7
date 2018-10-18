@@ -22,6 +22,7 @@ merge_df <- data.frame(statname, area, center)
 merge_data <- merge(df, merge_df, by="statname" )
 
 us <- map_data("state")
-merge_dat
+
+merge_data$statename <- tolower(merge_data$statename)
 
 
