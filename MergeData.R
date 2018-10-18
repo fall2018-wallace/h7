@@ -11,3 +11,5 @@ colnames(df)
 localUSArrests$stateName <- df$stateName  
 df <- merge(df, localUSArrests, by = "stateName")   #merging by the common column stateName
 df       
+
+str(df)
