@@ -15,6 +15,5 @@ df
 str(df)
 summary(df)
 
-stateName <- localUSArrests$stateName
-area <- state.area
-center <- state.center
+states<-readStates()
+
